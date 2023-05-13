@@ -30,7 +30,7 @@ public class Main {
                 response.getEntity().getContent(), new
                         TypeReference<>() {});
         Stream <Cat> stream = cats.stream();
-        stream.filter(value -> value.getUpvotes() == 0).forEach(System.out::println);
+        stream.filter(value -> value.getUpvotes() > 0).forEach(System.out::println);
 
     }
 }
